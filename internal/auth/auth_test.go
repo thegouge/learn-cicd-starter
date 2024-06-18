@@ -16,7 +16,7 @@ func TestApiKeyGetter(t *testing.T) {
 
 	tests := []test{
 		{input: "", output: "", error: ErrNoAuthHeaderIncluded},
-		{input: "fake Api key", output: "", error: MalformedAuthError},
+		{input: "fake Api key", output: "", error: ErrMalformedAuth},
 		{input: "ApiKey this-is-a-real-api-key", output: "this-is-a-real-api-key", error: nil},
 	}
 
